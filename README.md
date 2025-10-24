@@ -44,7 +44,7 @@ All code is tested and functional for the provided examples.
 ```
 YourDOST-Assignment/
 ├── dsa/
-│   └── SecondLargestNumber.java
+│   └── Problem.java
 │
 └── Simple To-Do CRUD - YourDost/
     ├── src/
