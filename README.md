@@ -1,4 +1,4 @@
-# 🏆 Full Stack Assignment Submission
+# 🏆 YourDost Assignment Submission
 
 [![Framework](https://img.shields.io/badge/Framework-SpringBoot-green)](https://spring.io/projects/spring-boot)
 [![Database](https://img.shields.io/badge/Database-MongoDB_Atlas-brightgreen)](https://www.mongodb.com/atlas)
