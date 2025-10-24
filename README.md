@@ -70,9 +70,7 @@ YourDOST-Assignment/
 
 ## 🚀 Live Deployment
 
-**API Base URL:** `https://your-todo-app.onrender.com`
 
-The application is deployed on **Render** using Docker and can be accessed at the above URL.
 
 ## 🧠 Part 1 – DSA Problem
 
@@ -109,6 +107,10 @@ java Problem
 ### Description
 A simple REST API for managing To-Do items with full CRUD functionality.  
 Data is stored in **MongoDB Atlas** (cloud database) and deployed on **Render**.
+
+**API Base URL:** `https://yourdost-assigement-todolist.onrender.com`
+
+The application is deployed on **Render** using Docker and can be accessed at the above URL.
 
 ### APIs
 | Method | Endpoint | Description |
@@ -191,7 +193,7 @@ ENTRYPOINT ["java","-jar","app.jar"]
 
 ## 📮 Postman Requests
 
-### Base URL: `https://your-todo-app.onrender.com/api/todos`
+### Base URL: `https://yourdost-assigement-todolist.onrender.com/todo`
 
 ### 1. Get All Todos
 **Request:**
@@ -214,7 +216,7 @@ GET https://your-todo-app.onrender.com/api/todos
 ### 2. Create New Todo
 **Request:**
 ```
-POST https://your-todo-app.onrender.com/api/todos
+POST https://yourdost-assigement-todolist.onrender.com/todos
 Content-Type: application/json
 ```
 
@@ -240,7 +242,7 @@ Content-Type: application/json
 ### 3. Get Todo by ID
 **Request:**
 ```
-GET https://your-todo-app.onrender.com/api/todos/67a4b5c6d7e8f90123456789
+GET https://yourdost-assigement-todolist.onrender.com/todos/{id}
 ```
 
 **Response:**
@@ -256,7 +258,7 @@ GET https://your-todo-app.onrender.com/api/todos/67a4b5c6d7e8f90123456789
 ### 4. Update Todo
 **Request:**
 ```
-PUT https://your-todo-app.onrender.com/api/todos/67a4b5c6d7e8f90123456789
+PUT https://yourdost-assigement-todolist.onrender.com/todos/{id}
 Content-Type: application/json
 ```
 
@@ -282,7 +284,7 @@ Content-Type: application/json
 ### 5. Delete Todo
 **Request:**
 ```
-DELETE https://your-todo-app.onrender.com/api/todos/67a4b5c6d7e8f90123456789
+DELETE https://yourdost-assigement-todolist.onrender.com/todos/{id}
 ```
 
 **Response:**
