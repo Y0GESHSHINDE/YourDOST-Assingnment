@@ -198,7 +198,7 @@ ENTRYPOINT ["java","-jar","app.jar"]
 ### 1. Get All Todos
 **Request:**
 ```
-GET https://your-todo-app.onrender.com/api/todos
+GET https://yourdost-assigement-todolist.onrender.com/todos
 ```
 
 **Response:**
