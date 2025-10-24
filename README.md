@@ -69,7 +69,19 @@ YourDOST-Assignment/
 
 ## 🚀 Live Deployment
 
+**Live API Base URL:** `https://yourdost-assigement-todolist.onrender.com`
 
+### ⚠️ Important Note About Render Deployment
+**Please Read Before Testing:**
+
+Render's free tier automatically **shuts down the server after 50 seconds of inactivity**. When you make the first request after inactivity:
+
+1. **First request might show 404 error or take longer**
+2. **Wait 1-2 minutes** and then hit the request again
+3. The server needs time to spin up again (cold start)
+4. Subsequent requests will be fast until next inactivity period
+
+**For testing:** If you get 404 error, please wait 1-2 minutes and retry. The application is working perfectly but requires this warm-up time on free tier.
 
 ## 🧠 Part 1 – DSA Problem
 
@@ -159,15 +171,6 @@ Access API at: http://localhost:8080/api/todos
 
 **Dockerfile:**
 ```dockerfile
-FROM openjdk:17-jdk-slim
-WORKDIR /app
-COPY target/*.jar app.jar
-EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar"]
-```
-
-**Build and Run with Docker:**
-```bash
 # Build stage
 FROM maven:3.9.7 AS build
 WORKDIR /app
@@ -181,7 +184,12 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","app.jar"]
+```
 
+**Build and Run with Docker:**
+```bash
+docker build -t todo-app .
+docker run -p 8080:8080 -e MONGODB_URI=your_mongodb_uri todo-app
 ```
 
 **Deploy on Render:**
@@ -192,12 +200,15 @@ ENTRYPOINT ["java","-jar","app.jar"]
 
 ## 📮 Postman Requests
 
-### Base URL: `https://yourdost-assigement-todolist.onrender.com/todo`
+### Base URL: `https://yourdost-assigement-todolist.onrender.com`
+
+### ⚠️ Important: Render Free Tier Notice
+**Please wait 1-2 minutes after first 404 error** - the server needs time to start up after inactivity.
 
 ### 1. Get All Todos
 **Request:**
 ```
-GET https://yourdost-assigement-todolist.onrender.com/todos
+GET https://yourdost-assigement-todolist.onrender.com/api/todos
 ```
 
 **Response:**
@@ -207,7 +218,7 @@ GET https://yourdost-assigement-todolist.onrender.com/todos
         "id": "67a4b5c6d7e8f90123456789",
         "title": "Finish assignment",
         "description": "Complete the YourDOST assignment",
-        "completed": false,
+        "completed": false
     }
 ]
 ```
@@ -215,7 +226,7 @@ GET https://yourdost-assigement-todolist.onrender.com/todos
 ### 2. Create New Todo
 **Request:**
 ```
-POST https://yourdost-assigement-todolist.onrender.com/todos
+POST https://yourdost-assigement-todolist.onrender.com/api/todos
 Content-Type: application/json
 ```
 
@@ -234,15 +245,14 @@ Content-Type: application/json
     "id": "67a4b5c6d7e8f90123456790",
     "title": "Learn Spring Boot",
     "description": "Study Spring Boot fundamentals",
-    "completed": false,
+    "completed": false
 }
 ```
-
 
 ### 3. Update Todo
 **Request:**
 ```
-PUT https://yourdost-assigement-todolist.onrender.com/todos/{id}
+PUT https://yourdost-assigement-todolist.onrender.com/api/todos/{id}
 Content-Type: application/json
 ```
 
@@ -261,19 +271,29 @@ Content-Type: application/json
     "id": "67a4b5c6d7e8f90123456789",
     "title": "Finish assignment - UPDATED",
     "description": "Complete the YourDOST assignment with bonus features",
-    "completed": true,
+    "completed": true
 }
 ```
 
 ### 4. Delete Todo
 **Request:**
 ```
-DELETE https://yourdost-assigement-todolist.onrender.com/todos/{id}
+DELETE https://yourdost-assigement-todolist.onrender.com/api/todos/{id}
 ```
 
 **Response:**
 ```json
 {
-    "message": "Todo deleted successfully",
+    "message": "Todo deleted successfully"
 }
 ```
+
+## 📝 Notes
+
+- **Render Free Tier Limitation**: Server spins down after 50 seconds of inactivity. First request after inactivity may take 1-2 minutes to respond.
+- **MongoDB Atlas**: Cloud database used for persistent storage
+- **Spring Boot 3.x**: Latest version with improved performance and features
+- **Docker Containerization**: Ensures consistent environment across deployments
+- **RESTful API**: Follows standard REST conventions for CRUD operations
+
+For any issues with the live deployment, please wait 2 minutes and retry your request. The application is fully functional but requires this warm-up period due to Render's free tier limitations.
