@@ -9,7 +9,6 @@
 - [Overview](#-overview)
 - [Video Demo](#-video-demo)
 - [Repository Structure](#-repository-structure)
-- [Live Deployment](#-live-deployment)
 - [Part 1 – DSA Problem](#-part-1--dsa-problem)
   - [Problem Statement](#problem-statement)
   - [Approach](#approach)
@@ -239,23 +238,8 @@ Content-Type: application/json
 }
 ```
 
-### 3. Get Todo by ID
-**Request:**
-```
-GET https://yourdost-assigement-todolist.onrender.com/todos/{id}
-```
 
-**Response:**
-```json
-{
-    "id": "67a4b5c6d7e8f90123456789",
-    "title": "Finish assignment",
-    "description": "Complete the YourDOST assignment",
-    "completed": false,
-}
-```
-
-### 4. Update Todo
+### 3. Update Todo
 **Request:**
 ```
 PUT https://yourdost-assigement-todolist.onrender.com/todos/{id}
@@ -281,7 +265,7 @@ Content-Type: application/json
 }
 ```
 
-### 5. Delete Todo
+### 4. Delete Todo
 **Request:**
 ```
 DELETE https://yourdost-assigement-todolist.onrender.com/todos/{id}
