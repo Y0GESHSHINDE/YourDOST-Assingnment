@@ -128,10 +128,10 @@ The application is deployed on **Render** using Docker and can be accessed at th
 ### APIs
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | `/api/todos` | Get all todos |
-| POST | `/api/todos` | Create a new todo |
-| PUT | `/api/todos/{id}` | Update a todo |
-| DELETE | `/api/todos/{id}` | Delete a todo |
+| GET | `/todos` | Get all todos |
+| POST | `/todos` | Create a new todo |
+| PUT | `/todos/{id}` | Update a todo |
+| DELETE | `/todos/{id}` | Delete a todo |
 
 ### Tech Stack
 - Java 17
@@ -167,7 +167,7 @@ mvn clean install
 mvn spring-boot:run
 ```
 
-Access API at: http://localhost:8080/api/todos
+Access API at: http://localhost:8080/todos
 
 ### Docker Deployment
 
@@ -210,7 +210,7 @@ docker run -p 8080:8080 -e MONGODB_URI=your_mongodb_uri todo-app
 ### 1. Get All Todos
 **Request:**
 ```
-GET https://yourdost-assigement-todolist.onrender.com/api/todos
+GET https://yourdost-assigement-todolist.onrender.com/todos
 ```
 
 **Response:**
@@ -228,7 +228,7 @@ GET https://yourdost-assigement-todolist.onrender.com/api/todos
 ### 2. Create New Todo
 **Request:**
 ```
-POST https://yourdost-assigement-todolist.onrender.com/api/todos
+POST https://yourdost-assigement-todolist.onrender.com/todos
 Content-Type: application/json
 ```
 
@@ -254,7 +254,7 @@ Content-Type: application/json
 ### 3. Update Todo
 **Request:**
 ```
-PUT https://yourdost-assigement-todolist.onrender.com/api/todos/{id}
+PUT https://yourdost-assigement-todolist.onrender.com/todos/{id}
 Content-Type: application/json
 ```
 
@@ -280,7 +280,7 @@ Content-Type: application/json
 ### 4. Delete Todo
 **Request:**
 ```
-DELETE https://yourdost-assigement-todolist.onrender.com/api/todos/{id}
+DELETE https://yourdost-assigement-todolist.onrender.com/todos/{id}
 ```
 
 **Response:**
