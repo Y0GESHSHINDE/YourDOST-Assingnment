@@ -35,9 +35,9 @@ This repository contains my completed assignment submission:
 All code is tested and functional for the provided examples.
 
 ## 🎥 Video Demo
-[![YouTube Demo](https://img.shields.io/badge/YouTube-Video_Demo-red)](https://youtu.be/your-video-link-here)
-
-*Click the badge above to watch the complete walkthrough and demo of the application*
+[![YouTube Demo](https://img.shields.io/badge/YouTube-Video_Demo-red)](https://youtu.be/iY-BezKjB0c)
+https://youtu.be/iY-BezKjB0c
+*Click the badge or on link to watch the complete walkthrough and explanation of the assignment*
 
 ## 📁 Repository Structure
 
