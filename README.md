@@ -125,6 +125,11 @@ Data is stored in **MongoDB Atlas** (cloud database) and deployed on **Render**.
 
 The application is deployed on **Render** using Docker and can be accessed at the above URL.
 
+https://app.getpostman.com/join-team?invite_code=41333cd6815cafb3d80fc7cd2a03e77d42341892b02d78a572d8f7febe780bb5&target_code=497dd6662a4ccd1c65afea1b0ab2e3e5
+
+Postman Collection
+
+
 ### APIs
 | Method | Endpoint | Description |
 |--------|----------|-------------|
